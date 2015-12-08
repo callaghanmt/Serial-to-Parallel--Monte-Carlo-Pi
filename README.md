@@ -1,14 +1,17 @@
 Serial to Parallel: A Monte Carlo Operation
 ==================================
 
-This tutorial covers how to write a parallel program to calculate π using the Monte Carlo method with MPI and OpenMP. 
+This tutorial covers how to build and test some serial and parallel programs to calculate π using the Monte Carlo method with MPI (distributed memory parallelism) and OpenMP (shared memory parallelism).  Although you might not be writing your own code, this exercise will give you a good idea of the benefits that parallelism can bring and how to test scalability.
 
 ####Compiling and Running
-Before you start, you will need to edit the submit scripts (submit.pbs and mpisubmit.pbs) and the Makefile and replace <PROJID> with the correct project ID. Once done, you need to load the PGI programming environment
+Before you start, you will need to edit the submit scripts (submit.sh and mpisubmit.sh) and the Makefile. Once done, you need to load the correct compiler environment.
 
+First check that you have the Intel compiler suite installed:
 ```
-module load PrgEnv-pgi
+module list
 ```
+You should see something like:
+
 
 To compile and submit the serial version, you need to run: ```make serial```
 
